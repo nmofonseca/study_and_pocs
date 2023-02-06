@@ -1,11 +1,11 @@
 #### Locals ####
 locals {
-  region = "us-east-1"
+  region      = "us-east-1"
   bucket_name = "s3-temp-state-bucket-${random_pet.randomnum.id}"
 
   common_tags = {
     Managedby = "Terraform"
-    For         = "TF State"
+    For       = "TF State"
   }
 
 }
@@ -37,7 +37,7 @@ module "state_bucket" {
 
   force_destroy = true
 
-  acl    = "private"
+  acl = "private"
 
 
   # S3 bucket-level Public Access Block configuration
@@ -56,7 +56,7 @@ module "state_bucket" {
     }
   }
 
-  
+
   tags = merge(
     local.common_tags,
     {
