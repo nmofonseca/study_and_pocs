@@ -3,11 +3,7 @@ Code from my experiments with the Terraform AWS S3 module.
 
 GitHub module  link:  [VPC Module ](https://github.com/terraform-aws-modules/terraform-aws-s3-bucket) 
 
-<<<<<<< HEAD
 Terraform Registry Link: [Registry - VPC Module](https://registry.terraform.io/modules/terraform-aws-modules/s3-bucket/aws/latest) 
-
-=======
->>>>>>> 90751738d109ce5e3d196ff0c3185fd22fcc928c
 ## Usage
 
 I used this code to create a S3 bucket for Terraform state but a creation of a bucket for anything can be done using the same code
