@@ -7,16 +7,19 @@ locals {
   vpc_create = "true"
 
   common_tags = {
-    Managedby = "Terraform"
-    For       = "Networking"
+    Managedby                        = "Terraform"
+    For                              = "Networking"
+    "kubernetes.io/cluster/test-eks" = "shared"
   }
 
   private_subnet_tags = {
-    Type = "private"
+    Type                              = "private"
+    "kubernetes.io/role/internal-elb" = 1
   }
 
   public_subnet_tags = {
-    Type = "public"
+    Type                     = "public"
+    "kubernetes.io/role/elb" = 1
   }
 
   intra_subnet_tags = {
