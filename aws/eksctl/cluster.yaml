@@ -9,8 +9,14 @@ metadata:
 iam:
   withOIDC: true
 
+#privateCluster:
+#  enabled: true
+
 vpc:
   id: "vpc-0d081894632c001f7"
+  clusterEndpoints:
+    publicAccess:  true
+    privateAccess: true
   subnets:
     private:
       us-east-1a:
