@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nettools
+  namespace: default
+spec:
+  containers:
+  - name: nettools
+    imagePullPolicy: Always
+    image: nmofonseca/nettools
+    command: [ "/bin/bash", "-c", "--" ]
+    args: [ "while true; do sleep 360; done;" ]
+    resources:
+      requests:
+        cpu: "0.05"
+        memory: 100Mi
+      limits:
+        cpu: "0.1"
+        memory: 200Mi
